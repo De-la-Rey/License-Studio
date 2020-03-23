@@ -23,5 +23,10 @@ namespace Mernok_RFID_Licence_Studio
         {
             InitializeComponent();
         }
+
+        private void NoRWDView_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

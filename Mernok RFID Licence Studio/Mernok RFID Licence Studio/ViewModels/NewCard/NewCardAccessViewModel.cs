@@ -86,7 +86,7 @@ namespace Mernok_RFID_Licence_Studio
                         {
                             #region Warning messages
                             MessageColour = Brushes.OrangeRed;
-                            if ((char)cardInfoRead.cardDetails.AccessLevel == 'C' || (char)cardInfoRead.cardDetails.AccessLevel == 'Z')
+                            if ((char)cardInfoRead.cardDetails.AccessLevel == 9 || (char)cardInfoRead.cardDetails.AccessLevel == 13 || (char)cardInfoRead.cardDetails.AccessLevel == 14 || (char)cardInfoRead.cardDetails.AccessLevel == 'C' || (char)cardInfoRead.cardDetails.AccessLevel == 'Z')
                             {
                                 Accesslevel_good = true;
                                 VMReturnData.IssuerAccess = cardInfoRead.cardDetails.AccessLevel;

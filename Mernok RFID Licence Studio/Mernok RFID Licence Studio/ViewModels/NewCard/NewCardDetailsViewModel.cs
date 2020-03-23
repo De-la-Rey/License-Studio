@@ -138,7 +138,7 @@ namespace Mernok_RFID_Licence_Studio
                     {
                         string Level = item.ToString().Replace("_", " ");
                         
-                        if (((char)VMReturnData.IssuerAccess == 'C') && (Level == "Operator" || Level == "Temporary Operator" || Level == "Trainee Operator" || Level == "Electrician" || Level == "Foreman" || Level == "Shift Boss" || Level == "Maintenance" || Level == "Field Technician") )
+                        if (((char)VMReturnData.IssuerAccess == 'C' || (VMReturnData.IssuerAccess == 9)) && (Level == "Operator" || Level == "Temporary Operator" || Level == "Trainee Operator" || Level == "Electrician" || Level == "Foreman" || Level == "Shift Boss" || Level == "Maintenance" || Level == "Field Technician") )
                         {
                             //AccessLevelList.Where(t => t.Equals("Operator") || t.Equals("Temporary Operator") || t.Equals("Trainee Operator")).ToList();
                             AccessLevelList.Add(Level);
@@ -170,13 +170,13 @@ namespace Mernok_RFID_Licence_Studio
                     ClientSitenum = 0;
                     ProductCode = mernokProductFile.mernokProductList.Select(t => t.ProductName).ToList();
                     ProductList_ret = 0;
-                    if (((char)VMReturnData.IssuerAccess == 'Z')|| VMReturnData.NewIssuerCard || VMReturnData.NewMernokCard)
+                    if (((char)VMReturnData.IssuerAccess == 'Z')|| VMReturnData.NewIssuerCard || VMReturnData.NewMernokCard || ((char)VMReturnData.IssuerAccess == 13))
                     {
                         ClientEdit = true;
                         AccessEdit = true;
 
                     }
-                    else if ((char)VMReturnData.IssuerAccess == 'C')
+                    else if ((char)VMReturnData.IssuerAccess == 'C' || ((char)VMReturnData.IssuerAccess == 9))
                     {
                         ClientEdit = false;
                         ClientCodenum = (int)VMReturnData.VMCardDetails.Client_Group;

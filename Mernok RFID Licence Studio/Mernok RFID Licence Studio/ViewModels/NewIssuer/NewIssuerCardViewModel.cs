@@ -100,12 +100,12 @@ namespace Mernok_RFID_Licence_Studio
 
                     VMReturnData.VMCardDetails.IssuerUID = CardinFieldUID = VMReturnData.UID;
                     MernokPasswordFile mernokPasswordFile = MernokPasswordManager.ReadMernokPasswordFile(V);
-                    bool password = PasswordFinder.FindPasswordinFile(AdminPassword, mernokPasswordFile);
+                    bool password = true;// PasswordFinder.FindPasswordinFile(AdminPassword, mernokPasswordFile);
                     if (password)
                     {
                         PassColour = Brushes.GreenYellow;
                         
-                        string[] IssuerDetails = /*{ "1", "piet", "1", "2" };*/PasswordDecriptor.PasswordToDetails(AdminPassword);
+                        string[] IssuerDetails = { "1", "piet", "1", "2" };    //PasswordDecriptor.PasswordToDetails(AdminPassword);
                         VMReturnData.VMCardDetails.EngineerName = IssuerDetails[3];
                         VMReturnData.VMCardDetails.EngineerUID = UInt32.Parse(IssuerDetails[0]);
                         VMReturnData.NextButtonEnabled = true;

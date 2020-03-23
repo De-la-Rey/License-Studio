@@ -50,7 +50,7 @@
             <Views:EditCardWarningView x:Name="EditCardWarningView" Grid.Row="0" Grid.Column="1" Grid.RowSpan="5" Visibility="Collapsed"/>
             <Views:NewCardWarningView x:Name="NewCardWarningView" Grid.Row="0" Grid.Column="1" Grid.RowSpan="5" Visibility="Collapsed"/>
             <Views:NewMernokCardView x:Name="NewMernokCardView"  Grid.Row="0" Grid.Column="1" Grid.RowSpan="5" Visibility="Collapsed"/>
-            <Views:NoRWDView x:Name="NoRWDView" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="5" Visibility="Visible"/>
+            <Views:NoRWDView x:Name="NoRWDView" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="5" Visibility="Visible" Loaded="NoRWDView_Loaded"/>
             <Image HorizontalAlignment="Right" Height="83" Grid.Row="2" VerticalAlignment="Bottom"  Margin="20" Source="/Mernok RFID Licence Studio;component/Resources/Images/Mernok_logo_2016.png"/>
 
 
