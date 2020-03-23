@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6B6CC22-9C3C-4016-A28D-2D00A1C56A1F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Mernok_RFID_Licence_Studio</RootNamespace>
+    <AssemblyName>Mernok RFID Licence Studio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Users\NeilPretorius\Desktop\LiscenceStudio\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Mernok Licence Studio</ProductName>
+    <PublisherName>Mernok Elektronik</PublisherName>
+    <SuiteName>TITAN</SuiteName>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Mernok_RFID_Licence_Studio.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ICON.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FCD90D1576FF150BB2EBD86EAD8C006688B469D6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Mernok RFID Licence Studio_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.Core.3.2.0\lib\net45\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\Caliburn.Micro.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\Caliburn.Micro.Platform.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Infrastructure\GeneralFunctions.cs" />
+    <Compile Include="MernokRFID\CardDetailManager.cs" />
+    <Compile Include="MernokRFID\CardDetails.cs" />
+    <Compile Include="DisplayManager\DefaultDisplayManager.cs" />
+    <Compile Include="DisplayManager\ViewModelReturnData.cs" />
+    <Compile Include="Infrastructure\DelegateCommand.cs" />
+    <Compile Include="Infrastructure\IRaiseCanExecuteChanged.cs" />
+    <Compile Include="NavigationBarTemplate\RuleTemplateView.xaml.cs" />
+    <Compile Include="NavigationBarTemplate\RuleTemplateViewModel.cs" />
+    <Compile Include="ViewModels\MernokCard\NewMernokCardViewModel.cs" />
+    <Compile Include="ViewModels\NewIssuer\NewIssuerPresentViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\AboutViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\AdvancedMenuViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\AdvancedPasswordViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\CardFormatErrorViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\CardProgramDoneViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\CardProgramFailViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\EditCardWarningViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\ExitPromptViewModel.cs" />
+    <Compile Include="ViewModels\LicenceViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\HelpViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\IssuerCardPrompViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\MenuViewModel.cs" />
+    <Compile Include="ViewModels\NewCard\NewCardAccessViewModel.cs" />
+    <Compile Include="ViewModels\NewCard\NewCardDetailsViewModel.cs" />
+    <Compile Include="ViewModels\NewCard\NewCardGroupViewModel.cs" />
+    <Compile Include="ViewModels\NewCard\NewCardTypeViewModel.cs" />
+    <Compile Include="ViewModels\NewCard\NewCardVehicleNamesViewModel.cs" />
+    <Compile Include="ViewModels\NewCard\NewCardVIDViewModel.cs" />
+    <Compile Include="ViewModels\NewIssuer\NewIssuerCardViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\NewCardWarningViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\NoRWDViewModel.cs" />
+    <Compile Include="ViewModels\SplashViews\ProgramPromptViewModel.cs" />
+    <Compile Include="Views\MernokCard\NewMernokCardView.xaml.cs">
+      <DependentUpon>NewMernokCardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewIssuer\NewIssuerPresentView.xaml.cs">
+      <DependentUpon>NewIssuerPresentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashView\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashView\AdvancedMenuView.xaml.cs">
+      <DependentUpon>AdvancedMenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashView\AdvancedPasswordView.xaml.cs">
+      <DependentUpon>AdvancedPasswordView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashView\CardProgramFail.xaml.cs">
+      <DependentUpon>CardProgramFail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashView\CardProgramDoneView.xaml.cs">
+      <DependentUpon>CardProgramDoneView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashView\CardFormatError.xaml.cs">
+      <DependentUpon>CardFormatError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashView\EditCardWarningView.xaml.cs">
+      <DependentUpon>EditCardWarningView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashView\ExitPromptView.xaml.cs">
+      <DependentUpon>ExitPromptView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LicenceView.xaml.cs">
+      <DependentUpon>LicenceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="MernokRFID\MernokRFID interface.cs" />
+    <Compile Include="MernokRFID\PortFromVIDPID.cs" />
+    <Compile Include="MernokRFID\RFIDCardInfoWrite.cs" />
+    <Compile Include="Infrastructure\ViewModel.cs" />
+    <Compile Include="Infrastructure\ViewModelExample.cs" />
+    <Compile Include="ViewModels\StartupViewModel.cs" />
+    <Compile Include="Views\SplashView\HelpView.xaml.cs">
+      <DependentUpon>HelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashView\IssuerCardPrompView.xaml.cs">
+      <DependentUpon>IssuerCardPrompView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashView\MenuView.xaml.cs">
+      <DependentUpon>MenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewCard\NewCardAccessView.xaml.cs">
+      <DependentUpon>NewCardAccessView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewCard\NewCardDetailsView.xaml.cs">
+      <DependentUpon>NewCardDetailsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewCard\NewCardGroupView.xaml.cs">
+      <DependentUpon>NewCardGroupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewCard\NewCardTypeView.xaml.cs">
+      <DependentUpon>NewCardTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewCard\NewCardVehicleNamesView.xaml.cs">
+      <DependentUpon>NewCardVehicleNamesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewCard\NewCardVIDView.xaml.cs">
+      <DependentUpon>NewCardVIDView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashView\NewCardWarningView.xaml.cs">
+      <DependentUpon>NewCardWarningView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashView\NoRWDView.xaml.cs">
+      <DependentUpon>NoRWDView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewIssuer\NewIssuerCardView.xaml.cs">
+      <DependentUpon>NewIssuerCardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashView\ProgramPromptView.xaml.cs">
+      <DependentUpon>ProgramPromptView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartupView.xaml.cs">
+      <DependentUpon>StartupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MernokRFID\RFIDCardInfoRead.cs" />
+    <Page Include="NavigationBarTemplate\RuleTemplateView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MernokCard\NewMernokCardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewIssuer\NewIssuerPresentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\AboutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\AdvancedMenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\AdvancedPasswordView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\CardProgramFail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\CardProgramDoneView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\CardFormatError.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\EditCardWarningView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\ExitPromptView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LicenceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\HelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\IssuerCardPrompView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\MenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewCard\NewCardAccessView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewCard\NewCardDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewCard\NewCardGroupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewCard\NewCardTypeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewCard\NewCardVehicleNamesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewCard\NewCardVIDView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\NewCardWarningView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\NoRWDView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewIssuer\NewIssuerCardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SplashView\ProgramPromptView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StartupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XamlStyles\Button_Style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XamlStyles\ProgressBarStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XamlStyles\ScrollBar_Style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Mernok RFID Licence Studio_1_TemporaryKey.pfx" />
+    <None Include="Mernok RFID Licence Studio_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Resource Include="Resources\Fonts\BANKGOTHIC BOLD.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buttons\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Mernok_Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buttons\Arrow_Back.png" />
+    <Resource Include="Resources\Images\Buttons\Arrow_Back_Hover.png" />
+    <Resource Include="Resources\Images\Buttons\Arrow_Left.png" />
+    <Resource Include="Resources\Images\Buttons\Arrow_Right.png" />
+    <Resource Include="Resources\Images\Buttons\Arrow_Right_Hover.png" />
+    <Resource Include="Resources\Images\Buttons\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MernokAssets\MernokAssets.csproj">
+      <Project>{48c8c950-9f16-4c62-a7eb-de06e63e9eef}</Project>
+      <Name>MernokAssets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MernokClients\MernokClients.csproj">
+      <Project>{8f5c59cf-818c-45be-a341-0601b0fb4b53}</Project>
+      <Name>MernokClients</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MernokPasswords\MernokPasswords.csproj">
+      <Project>{5284e46a-da00-4fb7-a4ab-f8b58b05d549}</Project>
+      <Name>MernokPasswords</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MernokProducts\MernokProducts.csproj">
+      <Project>{f2fa5702-46eb-4a75-bc34-2c677c4f9086}</Project>
+      <Name>MernokProducts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\CardFormatError.png" />
+    <Resource Include="Resources\Images\CArdInvalid.png" />
+    <Resource Include="Resources\Images\CardValid.png" />
+    <Resource Include="Resources\Images\PresentCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\TagTypes\53272.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\TagTypes\092.bmp" />
+    <Resource Include="Resources\Images\TagTypes\11.png" />
+    <Resource Include="Resources\Images\TagTypes\112.bmp" />
+    <Resource Include="Resources\Images\TagTypes\12.png" />
+    <Resource Include="Resources\Images\TagTypes\15.png" />
+    <Resource Include="Resources\Images\TagTypes\19.png" />
+    <Resource Include="Resources\Images\TagTypes\20.png" />
+    <Resource Include="Resources\Images\TagTypes\21.png" />
+    <Resource Include="Resources\Images\TagTypes\24.png" />
+    <Resource Include="Resources\Images\TagTypes\25.png" />
+    <Resource Include="Resources\Images\TagTypes\265.bmp" />
+    <Resource Include="Resources\Images\TagTypes\32.png" />
+    <Resource Include="Resources\Images\TagTypes\39.png" />
+    <Resource Include="Resources\Images\TagTypes\40.png" />
+    <Resource Include="Resources\Images\TagTypes\50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\TagTypes\1.png" />
+    <Resource Include="Resources\Images\TagTypes\10.png" />
+    <Resource Include="Resources\Images\TagTypes\2.png" />
+    <Resource Include="Resources\Images\TagTypes\3.png" />
+    <Resource Include="Resources\Images\TagTypes\31.png" />
+    <Resource Include="Resources\Images\TagTypes\4.png" />
+    <Resource Include="Resources\Images\TagTypes\47.png" />
+    <Resource Include="Resources\Images\TagTypes\49.png" />
+    <Resource Include="Resources\Images\TagTypes\5.png" />
+    <Resource Include="Resources\Images\TagTypes\7.png" />
+    <Resource Include="Resources\Images\TagTypes\8.png" />
+    <Resource Include="Resources\Images\TagTypes\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="087.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\TagTypes\Fleet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Mernok_logo_2016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ICON.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\RWD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buttons\About.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buttons\Options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buttons\Edit.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

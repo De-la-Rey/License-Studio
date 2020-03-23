@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="Mernok_RFID_Licence_Studio.NewCardVIDView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mernok_RFID_Licence_Studio"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1140" Background="#FF005195">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <!--Row 0-->
+
+
+        <!--Row 2-->
+        <Label Content="Add Vehicle serials for access control:"   FontSize="45" Grid.Row="2" HorizontalAlignment="Center" Foreground="White"
+               Margin="10"
+               Grid.ColumnSpan="3"/>
+
+        <!--Row 3-->
+        <Label Content="Vehicle SN:" HorizontalContentAlignment="Right" Grid.Row="3" Grid.Column="0" Foreground="White"  FontSize="25" VerticalContentAlignment="Center"/>
+        <TextBox Text="{Binding VehicleID}" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left"  FontSize="25" Width="400" Height="50" VerticalContentAlignment="Center" TextChanged="TextBox_TextChanged"/>
+        <Button Name="AddBtn" Grid.Row="3" Grid.Column="3" Content="Add" HorizontalAlignment="Left"   FontSize="25" Width="150" 
+                Command="{Binding AddBtn}" IsEnabled="{Binding BtnAddEnabled}"/>
+        
+        <!--Row 4-->
+        <Button x:Name="Remove" Grid.Row="4" Grid.Column="2" Content="Remove" HorizontalAlignment="Left" Height="50"  FontSize="25" Width="150" Command="{Binding RemoveBtn}" IsEnabled="{Binding BtnremoveEnabled}"/>
+        <Label Content="Vehicle SN List:" HorizontalContentAlignment="Right" Grid.Row="4" Grid.Column="0" Foreground="White"  FontSize="25"/>
+        <ListBox Name="Vehicles" Grid.Row="4" Grid.Column="1" Grid.RowSpan="4" FontSize="25" ItemsSource="{Binding DisplayVehicleList , Mode=TwoWay}">
+
+        </ListBox>
+
+        <Label Content="Bypass Vehicle Serial:" HorizontalContentAlignment="Right" Grid.Row="9" Grid.Column="0"   FontSize="25" Foreground="White"/>
+        <CheckBox Grid.Row="9" Grid.Column="1" FontSize="25" IsChecked="{Binding Bypassed}">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="3" ScaleY="3"/>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+    </Grid>
+</UserControl>

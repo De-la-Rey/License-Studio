@@ -1,0 +1,2 @@
+Settings -> Request new issuer car -> present blank card -> (follow through till successful file creation).
+Settings -> Create new issuer card from file -> select file -> enter password (password is stored in xml file copied to root in first readme)-> program card.

@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Mernok_RFID_Licence_Studio.NewCardWarningView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mernok_RFID_Licence_Studio"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="1140" Background="OrangeRed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="UID"  HorizontalContentAlignment="Center" HorizontalAlignment="Center" Content="New Card to be created not in field" Height="70"   FontSize="52" Grid.Row="1"/>
+        <Label HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Please present the card that is to be created:"  FontSize="28" Grid.Row="2"/>
+        <Label HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Content="{Binding NewcardUID}"  FontSize="50" Grid.Row="3"/>   
+    </Grid>
+</UserControl>

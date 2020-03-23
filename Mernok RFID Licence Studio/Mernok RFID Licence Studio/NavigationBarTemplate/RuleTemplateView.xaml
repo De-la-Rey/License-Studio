@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="Mernok_RFID_Licence_Studio.RuleTemplateView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mernok_RFID_Licence_Studio"
+      
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="1240" Background="#FF005195" >
+   
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../XamlStyles/Button_Style.xaml"/>
+                <ResourceDictionary>
+
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+
+    <Grid  >
+       
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--<Separator Margin="10,0,176,0" Grid.RowSpan="2"/>-->
+       <Button Width="Auto" Command="{Binding ButtonBack}" Grid.ColumnSpan="1" Grid.Row="0" Grid.RowSpan="2" BorderThickness="0" Background="Transparent">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Images/Buttons/Arrow_Back.png" Margin="15" HorizontalAlignment="Right" RenderOptions.BitmapScalingMode="Fant"/>
+                <!--<TextBlock Text="{Binding , UpdateSourceTrigger=PropertyChanged}" Margin="3,51,10,0" Grid.Row="1" Grid.Column="2"  Foreground="black" HorizontalAlignment="Right"/>-->
+            </StackPanel>
+        </Button>
+        <TextBlock Text="{Binding ViewTitle}" Grid.Column="2" FontSize="70" Foreground="#FFE0E0E0" HorizontalAlignment="Center" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Center" TextAlignment="Center" Margin="0,0,0,20"/>
+        <!--{Binding ViewTitle}-->
+
+        <TextBlock   Grid.Column="2" Grid.Row="1" FontSize="35" Foreground="black" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch">
+            <TextBlock.Text>
+                <MultiBinding StringFormat="{}{0}">
+                    <Binding Path="RuleTitle"  UpdateSourceTrigger="PropertyChanged" />
+                </MultiBinding>
+            </TextBlock.Text>
+        </TextBlock>
+        <!--<Button Content="Next" HorizontalAlignment="Left" Style="{StaticResource Button_Style}" Margin="170,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="76" Grid.Column="2" Height="46" Command="{Binding ButtonNextPage}"/>-->
+        <Button Grid.Column="4"  Command="{Binding ButtonRuleMenu}" BorderThickness="0" Background="Transparent" Grid.Row="0"  Grid.RowSpan="2" Visibility="{Binding MenuVisable}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Images/Buttons/Edit.png" Margin="5" HorizontalAlignment="Right" RenderOptions.BitmapScalingMode="Fant"/>
+                <!--<TextBlock Text="{Binding , UpdateSourceTrigger=PropertyChanged}" Margin="3,51,10,0" Grid.Row="1" Grid.Column="2"  Foreground="black" HorizontalAlignment="Right"/>-->
+            </StackPanel>
+        </Button>
+
+        <Button Command="{Binding ButtonHelp}" BorderThickness="0" Background="Transparent" Grid.Row="0" Grid.RowSpan="2" Grid.Column="4"  Visibility="{Binding HelpVisable}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Images/Buttons/About.png" Margin="8" HorizontalAlignment="Center" RenderOptions.BitmapScalingMode="Fant"/>
+                <!--<TextBlock Text="{Binding , UpdateSourceTrigger=PropertyChanged}" Margin="3,51,10,0" Grid.Row="1" Grid.Column="2"  Foreground="black" HorizontalAlignment="Right"/>-->
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="Button_Next" Width="Auto"  Command="{Binding ButtonNextPage}"  Grid.Column="3" Grid.Row="0" Grid.RowSpan="2" BorderThickness="0" Background="Transparent" Visibility="{Binding NextVisible}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Images/Buttons/Arrow_right.png" Margin="15" HorizontalAlignment="Right" RenderOptions.BitmapScalingMode="Fant"/>
+            </StackPanel>
+        </Button>
+
+        <Button Width="Auto" Command="{Binding ButtonPreviousPage}" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" BorderThickness="0" Background="Transparent" Visibility="{Binding PreviousVisible}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Images/Buttons/Arrow_Left.png" Margin="15" HorizontalAlignment="Right" RenderOptions.BitmapScalingMode="Fant"/>
+            </StackPanel>
+        </Button>
+        <!--<Separator Margin="44,18,182,16" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>-->
+        <!--<TextBlock Text="{Binding PreviousTitle, UpdateSourceTrigger=PropertyChanged}" Margin="100,10,10,10" Grid.Row="1" FontSize="15" Foreground="black"/>-->
+        <!--{Binding PreviousTitle, UpdateSourceTrigger=PropertyChanged}-->
+        <!--<Separator Margin="180,0,6,0" Grid.RowSpan="2" Grid.Column="2"/>-->
+        <!--<Separator  Grid.RowSpan="2" Grid.Column="1"/>-->
+        <ProgressBar x:Name="ProgressBar_Current_Page" Value="{Binding PageProgress}" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch"  RenderTransformOrigin="0.5,0.5"  Foreground="#124F88" />
+        <TextBlock Grid.Column="2" Grid.Row="2" Foreground="Black" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch" Grid.RowSpan="2">
+            <TextBlock.Text>
+                <MultiBinding StringFormat="{}({0}/{1})">
+                    <Binding Path="CurrentPageNumber" UpdateSourceTrigger="PropertyChanged" />
+                    <Binding Path="TotalPageNumber" UpdateSourceTrigger="PropertyChanged" />
+                </MultiBinding>
+            </TextBlock.Text>
+        </TextBlock>
+
+        <!--<TextBlock Text="{Binding NextTitle, UpdateSourceTrigger=PropertyChanged}" Margin="10,10,100,10" Grid.Row="1" Grid.Column="2" FontSize="15" Foreground="White" HorizontalAlignment="Stretch" TextAlignment="Right"/>-->
+        <!--{Binding NextTitle, UpdateSourceTrigger=PropertyChanged}-->
+        <!--<Separator Margin="181,17,44,17" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.Column="2">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Separator Margin="44,19,182,15" RenderTransformOrigin="2.533,0.618">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform X="-56.978" Y="-65.002"/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>-->
+    </Grid>
+</UserControl>

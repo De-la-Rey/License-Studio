@@ -1,0 +1,61 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mernok_RFID_Licence_Studio"
+        xmlns:Views="clr-namespace:Mernok_RFID_Licence_Studio" 
+        x:Class="Mernok_RFID_Licence_Studio.MainView"
+        mc:Ignorable="d"
+        Title="Licence Studio V1.0.0" Height="750" Width="1280"
+        WindowStartupLocation="CenterScreen"
+        VisualTextRenderingMode="Aliased" 
+    FontFamily="/Mernok RFID Licence Studio;component/Resources/Fonts/#BankGothic"
+    x:Name="Main" FontWeight="Light" WindowStyle="ToolWindow" Background="#FFE0E0E0" TextOptions.TextFormattingMode="Ideal">
+
+    <Viewbox Stretch="Fill">
+        <Grid Height="710" Width="1260">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Views:StartupView x:Name="StartUpView" Grid.Column="1" Grid.ColumnSpan="3" Margin="0" Grid.Row="0" Grid.RowSpan="3" Visibility="Collapsed"/>
+            <Views:MenuView x:Name="MenuView"  Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="5" Visibility="Collapsed" />
+            <Views:AdvancedPasswordView x:Name="AdvancedPasswordView" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="5" Visibility="Collapsed"/>
+            <Views:AdvancedMenuView x:Name="AdvancedMenuView" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="5" Visibility="Collapsed"/>
+            <Views:RuleTemplateView x:Name="RuleTemplateView" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="1" Visibility="Collapsed"/>
+            <Views:LicenceView x:Name="LicenceView" Grid.Column="1" Grid.ColumnSpan="4" Margin="0" Grid.Row="1" Grid.RowSpan="3" Visibility="Collapsed"/>
+            <Views:NewCardAccessView x:Name="NewCardAccessView" Grid.Column="1" Grid.ColumnSpan="3" Margin="0" Grid.Row="1" Grid.RowSpan="3" Visibility="Collapsed"/>
+            <Views:NewIssuerPresentView x:Name="NewIssuerPresentView" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="5" Visibility="Collapsed"/>
+            <Views:NewIssuerCardView x:Name="NewIssuerCardView" Grid.Column="1" Grid.ColumnSpan="3" Margin="0" Grid.Row="1" Grid.RowSpan="3" Visibility="Collapsed"/>
+            <Views:NewCardDetails1View x:Name="NewCardDetails1View" Grid.Column="1" Grid.ColumnSpan="3" Margin="0" Grid.Row="1" Grid.RowSpan="3" Visibility="Collapsed"/>
+            <Views:NewCardVIDView x:Name="NewCardVIDView" Grid.Column="1" Grid.ColumnSpan="3" Margin="0" Grid.Row="1" Grid.RowSpan="3" Visibility="Collapsed"/>
+            <Views:NewCardVehicleNamesView x:Name="NewCardVehicleNamesView" Grid.Column="1" Grid.ColumnSpan="3" Margin="0" Grid.Row="1" Grid.RowSpan="3" Visibility="Collapsed"/>
+            <Views:NewCardTypeView x:Name="NewCardTypeView" Grid.Column="1" Grid.ColumnSpan="3" Margin="0" Grid.Row="1" Grid.RowSpan="3" Visibility="Collapsed"/>
+            <Views:NewCardGroupView x:Name="NewCardGroupView" Grid.Column="1" Grid.ColumnSpan="3" Margin="0" Grid.Row="1" Grid.RowSpan="3" Visibility="Collapsed"/>
+            <Views:ProgramPromptView x:Name="ProgramPromptView" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="5" Visibility="Collapsed"/>
+            <Views:CardProgramDoneView x:Name="CardProgramComplete" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Visibility="Collapsed"/>
+            <Label x:Name="CardInField"  Grid.Column="4" HorizontalAlignment="Left" Margin="0,203,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Content="{Binding CardInField}"/>
+            <Views:CardFormatError x:Name="CardError" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Visibility="Collapsed"/>
+            <Views:CardProgramFail x:Name="CardProgramFail" Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" Grid.ColumnSpan="5" Visibility="Collapsed"/>
+            <Views:IssuerCardPrompView x:Name="IssuerCardPrompView" Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" Grid.ColumnSpan="5" Visibility="Collapsed"/>
+            <Views:ExitPromptView x:Name="ExitPromptView" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="5" Visibility="Collapsed"/>           
+            <Views:AboutView x:Name="AboutView" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Visibility="Collapsed"/>
+            <Views:HelpView x:Name="HelpView" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Visibility="Collapsed"/>
+            <Views:EditCardWarningView x:Name="EditCardWarningView" Grid.Row="0" Grid.Column="1" Grid.RowSpan="5" Visibility="Collapsed"/>
+            <Views:NewCardWarningView x:Name="NewCardWarningView" Grid.Row="0" Grid.Column="1" Grid.RowSpan="5" Visibility="Collapsed"/>
+            <Views:NewMernokCardView x:Name="NewMernokCardView"  Grid.Row="0" Grid.Column="1" Grid.RowSpan="5" Visibility="Collapsed"/>
+            <Views:NoRWDView x:Name="NoRWDView" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="5" Visibility="Visible"/>
+            <Image HorizontalAlignment="Right" Height="83" Grid.Row="2" VerticalAlignment="Bottom"  Margin="20" Source="/Mernok RFID Licence Studio;component/Resources/Images/Mernok_logo_2016.png"/>
+
+
+        </Grid>
+
+    </Viewbox>
+    
+</Window>

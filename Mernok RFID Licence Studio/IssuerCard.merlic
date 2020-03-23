@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CardDetailsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FCardDetails>
+    <cardUID>3664824882</cardUID>
+    <CommanderRFIDCardMemoryBlock>176</CommanderRFIDCardMemoryBlock>
+    <AccessLevel>67</AccessLevel>
+    <Warning_Date>2019-12-25T00:00:00</Warning_Date>
+    <Expiry_Date>2019-12-18T00:00:00</Expiry_Date>
+    <Client_Group>1</Client_Group>
+    <Client_Site>1</Client_Site>
+    <OperationalArea>21</OperationalArea>
+    <ByPassBits>0</ByPassBits>
+    <Options>0</Options>
+    <VehicleLicenceType>
+      <unsignedInt>4</unsignedInt>
+      <unsignedInt>11</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+      <unsignedInt>0</unsignedInt>
+    </VehicleLicenceType>
+    <VID>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+      <unsignedShort>0</unsignedShort>
+    </VID>
+    <OperatorName>BOB</OperatorName>
+    <IssuerUID>0</IssuerUID>
+    <Training_Date>2018-12-09T17:41:05.5560308+02:00</Training_Date>
+    <Issue_Date>2018-12-09T17:41:05.5550308+02:00</Issue_Date>
+    <EngineerUID>0</EngineerUID>
+    <HotFlagedDate>0001-01-01T00:00:00</HotFlagedDate>
+    <HotFlagedVID>0</HotFlagedVID>
+    <Hotflaged_status>false</Hotflaged_status>
+    <VehicleGroup>AAAAAAAAAAAAAAAAAAAA</VehicleGroup>
+    <VehicleGroupstr>
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+    </VehicleGroupstr>
+    <ProductCode>3</ProductCode>
+    <VehicleNames>
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+      <string xsi:nil="true" />
+    </VehicleNames>
+  </FCardDetails>
+  <version>1</version>
+  <dateCreated>2018-12-09T17:41:29.6868+02:00</dateCreated>
+  <createdBy>N. Pretorius</createdBy>
+</CardDetailsFile>

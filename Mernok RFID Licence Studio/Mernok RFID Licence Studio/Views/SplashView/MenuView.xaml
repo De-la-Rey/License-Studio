@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="Mernok_RFID_Licence_Studio.MenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mernok_RFID_Licence_Studio"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1140" Background="#02000000" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../XamlStyles/Button_Style.xaml"/>
+                <ResourceDictionary>
+
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid  Background="Crimson">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+<!--Row1-->
+        <Label Content="MENU" FontSize="80" Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center"/>
+        <Button Command="{Binding Exitbtn}" BorderThickness="2" Background="Transparent" Grid.Row="1" Grid.Column="0" MaxHeight="80" HorizontalAlignment="Center" VerticalAlignment="Bottom" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Mernok RFID Licence Studio;component/Resources/Images/Buttons/Exit.png" HorizontalAlignment="Right" RenderOptions.BitmapScalingMode="Fant"/>
+            </StackPanel>
+        </Button>
+
+        <!--Row2-->
+        <Button Content="About Application"  Command="{Binding AboutBtn}" Grid.Row="2" Grid.Column="1" Style="{StaticResource ButtonErrorStyle}" Height="60"  FontSize="30" />
+        
+
+<!--Row4-->
+        <Button Content="Request new Issuer Card"  Command="{Binding IssuerCardBtn}" Grid.Row="4" Grid.Column="1" Style="{StaticResource ButtonErrorStyle}" Height="60" FontSize="30" />
+
+        <!--Row5-->
+        <Button Content="Create new Issuer Card from file"  Command="{Binding IssuerFileCardBtn}" Grid.Row="5" Grid.Column="1" Style="{StaticResource ButtonErrorStyle}" Height="60" FontSize="30" />
+
+
+
+        <!--Row7-->
+        <Button Content="Advanced Settings"  Command="{Binding AdvancedSet}" Grid.Row="8" Grid.Column="1" Style="{StaticResource ButtonErrorStyle}" Height="60" FontSize="30" />
+
+
+
+
+    </Grid>
+</UserControl>

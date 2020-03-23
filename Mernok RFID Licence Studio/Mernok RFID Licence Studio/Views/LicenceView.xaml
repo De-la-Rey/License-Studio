@@ -1,0 +1,256 @@
+﻿<UserControl x:Class="Mernok_RFID_Licence_Studio.LicenceView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mernok_RFID_Licence_Studio"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1140" Background="#FFE0E0E0">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <!--0-->
+            <ColumnDefinition Width="*" />
+            <!--1-->
+            <ColumnDefinition Width="*" />
+            <!--2-->
+            <ColumnDefinition Width="*" />
+            <!--3-->
+            <ColumnDefinition Width="1.1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <!--0 Client details description-->
+            <RowDefinition Height="auto"/>
+            <!--1-->
+            <RowDefinition Height="*"/>
+            <!--2 description-->
+            <RowDefinition Height="auto"/>
+            <!--3-->
+            <RowDefinition Height="*"/>
+            <!--4-->
+            <RowDefinition Height="auto"/>
+            <!--5-->
+            <RowDefinition Height="auto"/>
+            <!--6-->
+            <RowDefinition Height="*"/>
+            <!--7-->
+            <RowDefinition Height="auto"/>
+            <!--8-->
+            <RowDefinition Height="*"/>
+            <!--9-->
+            <RowDefinition Height="auto"/>
+            <!--10-->
+            <RowDefinition Height="*"/>
+            <!--11-->
+            <RowDefinition Height="auto"/>
+            <!--12-->
+            <RowDefinition Height="*"/>
+            <!--13-->
+            <RowDefinition Height="auto"/>
+            <!--14-->
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Row 0 -->
+
+        <Label Name="ClientGroupDesctiption" Content="Client Group:" Grid.Row="0" Grid.Column="0"  FontSize="20" Margin="0" Background="#FF005195" Foreground="White" HorizontalContentAlignment="Center"/>
+        <Label Name="ClientCodeDesctiption" Content="Client Code:" Grid.Row="0" Grid.Column="1"  FontSize="20" Margin="0" Background="#FF005195" Foreground="White" HorizontalContentAlignment="Center"/>
+        <Label Name="AccesslevelDescription" Content="Access Level:" Grid.Row="2" Grid.Column="4"  FontSize="20" Margin="0" Background="#FF005195" Foreground="White" HorizontalContentAlignment="Center"/>
+        <!--<Button Name="Editbtn" Content="Edit Card" Grid.Row="0" Grid.Column="6" Width="100" Grid.RowSpan="2" Command="{Binding Editbtn}"/>-->
+
+        <!-- Row 1-->
+        <Label Name="ClientGroup" Content="{Binding ClientGroup}" Grid.Row="1" Grid.Column="0" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                 FontSize="35" Margin="0"/>
+        <Label Name="ClientCode" Content="{Binding ClientCode}" Grid.Row="1" Grid.Column="1" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                 FontSize="35" Margin="0"/>
+        <Label Name="AccessLevel" Content="{Binding AccessLevel}" Grid.Row="3" Grid.Column="3"  BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+        <!-- Row 2 -->
+        <Grid Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <!--0-->
+                <ColumnDefinition Width="2*" />
+                <!--1-->
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1.8*"/>
+            </Grid.RowDefinitions>
+
+            <Label Name="VehicleInfo" Content="Access:" Grid.Row="0" Grid.Column="1" FontSize="20"  HorizontalContentAlignment="Center"
+               Background="#FF005195" Foreground="White"/>
+            <Label Name="ProductInfo" Content="Product:" Grid.Row="0" Grid.Column="0" FontSize="20"  HorizontalContentAlignment="Center"
+               Background="#FF005195" Foreground="White"/>
+
+            <Label Name="AcccessType" Content="{Binding AccessType}" Grid.Row="1" Grid.Column="1" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                   FontSize="30" Margin="0"/>
+            <Label Name="ProcuctType" Content="{Binding ProductCode}" Grid.Row="1" Grid.Column="0" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                   FontSize="30" Margin="0"/>
+        </Grid>
+
+        <Label Name="OperatorDesctiption" Content="Operator Name:" Grid.Row="2" Grid.Column="0" FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+        <Label Name="OperatorIdentification" Content="Operator ID:" Grid.Row="2" Grid.Column="1" FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+        <Label Name="OperatorSurnameLabel" Content="Operator Surname:" Grid.Row="2" Grid.Column="2" FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+
+
+        <!-- Row 3 -->
+        <Label Name="OperatorName" Content="{Binding OperatorName}" Grid.Row="3" Grid.RowSpan="2" Grid.Column="0"  BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="40" Margin="0" VerticalAlignment="Stretch"/>
+        <Label Name="OperatorID" Content="{Binding OperatorID}" Grid.Row="3" Grid.RowSpan="2" Grid.Column="1"  BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="40" Margin="0" VerticalAlignment="Stretch"/>
+        <Label Name="OperatorSurname" Content="{Binding OperatorSurname}" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2"  BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="40" Margin="0" VerticalAlignment="Stretch"/>
+
+
+        <!-- Row 4 -->
+        <ListBox Name="Vehicles" Grid.Row="5" Grid.Column="3" Grid.RowSpan="8" ItemsSource="{Binding VehicleInfoList}" Background="#FFE0E0E0" BorderBrush="#FF005195" BorderThickness="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="300"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding ImagePath}" Grid.Column="0" Height="50" Margin="5,0,5,0"/>
+                        <TextBlock Text="{Binding VehicleInfo}" FontSize="20" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+
+        </ListBox>
+
+        <!-- Row 5 -->
+        <Label Name="WarningDateDescription" Content="Warning Date:" Grid.Row="5" Grid.Column="1"  FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+
+        <Label Name="ExpiryDateDescription" Content="Expiry Date:" Grid.Row="5" Grid.Column="2"  Background="#FF005195" Foreground="White" FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0"/>
+
+        <!-- Row 6 -->
+        <Label Name="WarningDate" Content="{Binding WarningDate}" Grid.Row="6" Grid.Column="1" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                 FontSize="35" Margin="0"  Background= "{Binding WarnColor}"/>
+
+        <Label Name="ExpiryDate" Content="{Binding ExpireDate}" Grid.Row="6" Grid.Column="2" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0" Background= "{Binding ExpColour}"/>
+
+        <!-- Row 7 -->
+        <Label Name="IssueDateDescription" Content="Issue Date:" Grid.Row="5" Grid.Column="0"   FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+
+        <Label Content="Training Date:" Grid.Row="7" Grid.Column="0"   FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+        <Label Content="Training Warning Date:" Grid.Row="7" Grid.Column="1"   FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+        <Label Content="Training Expiry Date:" Grid.Row="7" Grid.Column="2"   FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+
+        <Label Content="Medical Date:" Grid.Row="9" Grid.Column="0"   FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+        <Label Content="Medical Warning Date:" Grid.Row="9" Grid.Column="1"   FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+        <Label Content="Medical Expiry Date:" Grid.Row="9" Grid.Column="2"   FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+
+        <Label Content="Dover Date:" Grid.Row="11" Grid.Column="0"   FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+        <Label Content="Dover Warning Date:" Grid.Row="11" Grid.Column="1"   FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+        <Label Content="Dover Expiry Date:" Grid.Row="11" Grid.Column="2"   FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195" Foreground="White"/>
+
+        <Label Name="MedicalDate" Content="{Binding MedicalDate}" Grid.Row="10" Grid.Column="0" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+        <Label Name="MedicalWarningDate" Content="{Binding MedicalWarningDate}" Grid.Row="10" Grid.Column="1" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+        <Label Name="MedicalExpirynDate" Content="{Binding MedicalExpiryDate}" Grid.Row="10" Grid.Column="2" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+
+        <!-- Row 8 -->
+        <Label Name="IssueDate" Content="{Binding IssueDate}" Grid.Row="6" Grid.Column="0" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+        <Label Name="TrainingDate" Content="{Binding TrainingDate}" Grid.Row="8" Grid.Column="0" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+        <Label Name="TrainingWarningDate" Content="{Binding TrainingWarningDate}" Grid.Row="8" Grid.Column="1" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+        <Label Name="TrainingExpirynDate" Content="{Binding TrainingExpiryDate}" Grid.Row="8" Grid.Column="2" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+        <!-- Row 9 -->
+        <Label Name="EngineerNameDescription" Content="Issuer Name:" Grid.Row="13" Grid.Column="0"   FontSize="20" Margin="0" Background="#FF005195" Foreground="White" HorizontalContentAlignment="Center"/>
+
+        <Label Name="IssuerUIDDescription" Content="Issuer UID:" Grid.Row="13" Grid.Column="1"   FontSize="20" HorizontalContentAlignment="Center"
+               Margin="0" Background="#FF005195"  Foreground="White"/>
+
+
+        <!-- Row 10 -->
+        <Label Name="IssuerName" Content="{Binding EngineerName}" Grid.Row="14" Grid.Column="0" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+
+        <Label Name="IssuerUID" Content="{Binding IssuerUID}" Grid.Row="14" Grid.Column="1" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+
+        <!-- Row 11 -->
+        <Label  Content="Hot Flag:" Grid.Row="0" Grid.Column="3"  FontSize="20"  Margin="0" Background="#FF005195"  Foreground="White"/>
+        <Grid Grid.Row="1" Grid.Column="3" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="1.8*" />
+                <ColumnDefinition Width="1.5*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1.5*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Row 1 -->
+            <Label Name="HotFlagDescription" Content="Flaged:" Grid.Row="0" Grid.Column="0"   FontSize="12"  Margin="0" Background="#FF005170"  Foreground="White"/>
+            <Label Name="HotFlagDateDescription" Content="Date:" Grid.Row="0" Grid.Column="1" FontSize="12"  Margin="0" Background="#FF005170" Foreground="White" />
+            <Label Name="HotFlagVIDDescription" Content="VID:" Grid.Row="0" Grid.Column="2" FontSize="12" Margin="0" Background="#FF005170" Foreground="White"/>
+
+            <!--Row 2-->
+            <Label Name="HotFlag" Content="{Binding HotFlag}" Grid.Row="1" Grid.Column="0" BorderBrush="#FF005195" BorderThickness="1"
+                   FontSize="20"  Margin="0"/>
+            <Label Name="HotFlagDate" Content="{Binding HotFlagDate}" Grid.Row="1" Grid.Column="1" BorderBrush="#FF005195" BorderThickness="1"
+                   FontSize="20"  Margin="0"/>
+            <Label Name="HotFlagVID" Content="{Binding HotFlagUID}" Grid.Row="1" Grid.Column="2" BorderBrush="#FF005195" BorderThickness="1"
+                   FontSize="20"  Margin="0"/>
+
+        </Grid>
+        <Label Name="EngineerUIDDescription" Content="Engineer UID:" Grid.Row="13" Grid.Column="2"   FontSize="20" Margin="0" Background="#FF005190"  Foreground="White" HorizontalContentAlignment="Center"/>
+        <Label Content="" Grid.Row="13" Grid.Column="3"   FontSize="25" Margin="0" Background="#FF005190"  Foreground="White" HorizontalContentAlignment="Center" Grid.RowSpan="2"/>
+
+
+        <!-- Row 16 -->
+        <Label Name="EngineerUID" Content="{Binding EngineerUID}" Grid.Row="14" Grid.Column="2" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+
+
+        <Label Name="DoverDate" Content="{Binding DoverDate}" Grid.Row="12" Grid.Column="0" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+        <Label Name="DoverWarningDate" Content="{Binding DoverWarningDate}" Grid.Row="12" Grid.Column="1" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+        <Label Name="DoverExpirynDate" Content="{Binding DoverExpiryDate}" Grid.Row="12" Grid.Column="2" BorderBrush="#FF005195" BorderThickness="1" HorizontalContentAlignment="Center"
+                   FontSize="35" Margin="0"/>
+
+    </Grid>
+</UserControl>

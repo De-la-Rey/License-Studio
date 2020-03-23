@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 d039b50d13e6d9def5837f24213877af89a0af8f Neil Pretorius <neil@mernok.co.za> 1548235955 +0200	branch: Created from origin/NewFlow
+d039b50d13e6d9def5837f24213877af89a0af8f 94394d4105c48474316983c2ed3a2cfa42ed2c87 Neil Pretorius <neil@mernok.co.za> 1548697735 +0200	commit: none
+94394d4105c48474316983c2ed3a2cfa42ed2c87 b47803f4c3088cc027d742a7d21d8c27afeeace4 Neil Pretorius <neil@mernok.co.za> 1549268780 +0200	pull --no-rebase --progress origin: Fast-forward
+b47803f4c3088cc027d742a7d21d8c27afeeace4 f52ae4832c10788d432fc85b90dad3f5302a1cb4 Neil Pretorius <neil@mernok.co.za> 1550070104 +0200	pull --no-rebase --progress origin: Fast-forward
+f52ae4832c10788d432fc85b90dad3f5302a1cb4 2e084a12f121124c299761c8d0c91024ce609099 Neil Pretorius <neil@mernok.co.za> 1550124765 +0200	commit: Update .gitignore

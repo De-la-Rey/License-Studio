@@ -1,0 +1,247 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-Mernok_RFID_Licence_Studio.Xaml_Styles">
+
+    <Style x:Key="Button_Style" TargetType="{x:Type Button}">
+        <!--<Setter Property="Background" Value="#124F88"/>-->
+        <Setter Property="Background" >
+            <Setter.Value>
+                <LinearGradientBrush                        
+                     StartPoint="0,0"
+                     EndPoint="0,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#124F88"
+                    Offset="0" />
+                            <GradientStop Color="#0F4370"
+                    Offset="0.4" />
+                            <GradientStop Color="#0F4370"
+                    Offset="0.6" />
+                            <GradientStop  Color="#0A2D49"
+                    Offset="1" />
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground" Value="#EEE"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[0].(GradientStop.Color)" To="#222"  Duration="0:0:0.5"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[1].(GradientStop.Color)" To="#333"  Duration="0:0:0.5"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[2].(GradientStop.Color)" To="#333"  Duration="0:0:0.5"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[3].(GradientStop.Color)" To="#444"  Duration="0:0:0.5"/>                        
+                        </Storyboard>
+                        
+                    </BeginStoryboard>
+                </MultiTrigger.EnterActions>
+                <MultiTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[0].(GradientStop.Color)" To="#124F88"  Duration="0:0:0.8"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[1].(GradientStop.Color)" To="#0F4370"  Duration="0:0:0.8"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[2].(GradientStop.Color)" To="#0F4370"  Duration="0:0:0.8"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[3].(GradientStop.Color)" To="#0A2D49"  Duration="0:0:0.8"/>                           
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiTrigger.ExitActions>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="Button_Left_Style" TargetType="{x:Type Button}">
+        <!--<Setter Property="Background" Value="#124F88"/>-->
+        <Setter Property="Background" >
+            <Setter.Value>
+                <LinearGradientBrush                        
+                     StartPoint="0,0"
+                     EndPoint="1,0">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#124F88"
+                    Offset="0" />
+                            <GradientStop Color="#0F4370"
+                    Offset="0.4" />
+                            <GradientStop Color="#0F4370"
+                    Offset="0.6" />
+                            <GradientStop Color="#0A2D49"
+                    Offset="1" />
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground" Value="#EEE"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[0].(GradientStop.Color)" To="#222"  Duration="0:0:0.5"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[1].(GradientStop.Color)" To="#333"  Duration="0:0:0.5"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[2].(GradientStop.Color)" To="#333"  Duration="0:0:0.5"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[3].(GradientStop.Color)" To="#444"  Duration="0:0:0.5"/>
+                        </Storyboard>
+
+                    </BeginStoryboard>
+                </MultiTrigger.EnterActions>
+                <MultiTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[0].(GradientStop.Color)" To="#124F88"  Duration="0:0:0.8"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[1].(GradientStop.Color)" To="#0F4370"  Duration="0:0:0.8"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[2].(GradientStop.Color)" To="#0F4370"  Duration="0:0:0.8"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[3].(GradientStop.Color)" To="#0A2D49"  Duration="0:0:0.8"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiTrigger.ExitActions>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="Button_Right_Style" TargetType="{x:Type Button}">
+        <!--<Setter Property="Background" Value="#124F88"/>-->
+        <Setter Property="Background" >
+            <Setter.Value>
+                <LinearGradientBrush                        
+                     StartPoint="1,0"
+                     EndPoint="0,0">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#124F88"
+                    Offset="0" />
+                            <GradientStop Color="#0F4370"
+                    Offset="0.4" />
+                            <GradientStop Color="#0F4370"
+                    Offset="0.6" />
+                            <GradientStop Color="#0A2D49"
+                    Offset="1" />
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground" Value="#EEE"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True"/>
+                </MultiTrigger.Conditions>
+                   <MultiTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[0].(GradientStop.Color)" To="#222"  Duration="0:0:0.5"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[1].(GradientStop.Color)" To="#333"  Duration="0:0:0.5"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[2].(GradientStop.Color)" To="#333"  Duration="0:0:0.5"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[3].(GradientStop.Color)" To="#444"  Duration="0:0:0.5"/>                        
+                        </Storyboard>
+                        
+                    </BeginStoryboard>
+                </MultiTrigger.EnterActions>
+                <MultiTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[0].(GradientStop.Color)" To="#124F88"  Duration="0:0:0.8"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[1].(GradientStop.Color)" To="#0F4370"  Duration="0:0:0.8"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[2].(GradientStop.Color)" To="#0F4370"  Duration="0:0:0.8"/>
+                            <ColorAnimation  Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[3].(GradientStop.Color)" To="#0A2D49"  Duration="0:0:0.8"/>                           
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiTrigger.ExitActions>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="Button_Next_Style"  TargetType="{x:Type Button}">
+
+        <Setter Property="Background" >
+        <Setter.Value>
+                <ImageBrush ImageSource="pack://application:,,,/../Resources/Images/Buttons/Arrow_Right.png"  />
+        </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="border" 
+                        BorderThickness="0" 
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="border">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="pack://application:,,,/../Resources/Images/Buttons/Arrow_Right_Hover.png"  />
+                                </Setter.Value>
+                            </Setter>                        
+                                
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+            </Setter>
+    </Style>
+
+
+        <Style x:Key="ButtonErrorStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="10"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="BorderThickness" Value="2"/>
+            
+        <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFc42e09"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+            </Trigger>
+            </Style.Triggers>
+        </Style>
+
+</ResourceDictionary>

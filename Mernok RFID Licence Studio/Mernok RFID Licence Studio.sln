@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mernok RFID Licence Studio", "Mernok RFID Licence Studio\Mernok RFID Licence Studio.csproj", "{A6B6CC22-9C3C-4016-A28D-2D00A1C56A1F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F2FA5702-46EB-4A75-BC34-2C677C4F9086} = {F2FA5702-46EB-4A75-BC34-2C677C4F9086}
+		{5284E46A-DA00-4FB7-A4AB-F8B58B05D549} = {5284E46A-DA00-4FB7-A4AB-F8B58B05D549}
+		{8F5C59CF-818C-45BE-A341-0601B0FB4B53} = {8F5C59CF-818C-45BE-A341-0601B0FB4B53}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MernokAssets", "MernokAssets\MernokAssets.csproj", "{48C8C950-9F16-4C62-A7EB-DE06E63E9EEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MernokProducts", "MernokProducts\MernokProducts.csproj", "{F2FA5702-46EB-4A75-BC34-2C677C4F9086}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MernokPasswords", "MernokPasswords\MernokPasswords.csproj", "{5284E46A-DA00-4FB7-A4AB-F8B58B05D549}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MernokClients", "MernokClients\MernokClients.csproj", "{8F5C59CF-818C-45BE-A341-0601B0FB4B53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6B6CC22-9C3C-4016-A28D-2D00A1C56A1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6B6CC22-9C3C-4016-A28D-2D00A1C56A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6B6CC22-9C3C-4016-A28D-2D00A1C56A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6B6CC22-9C3C-4016-A28D-2D00A1C56A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48C8C950-9F16-4C62-A7EB-DE06E63E9EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48C8C950-9F16-4C62-A7EB-DE06E63E9EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48C8C950-9F16-4C62-A7EB-DE06E63E9EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C8C950-9F16-4C62-A7EB-DE06E63E9EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2FA5702-46EB-4A75-BC34-2C677C4F9086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2FA5702-46EB-4A75-BC34-2C677C4F9086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2FA5702-46EB-4A75-BC34-2C677C4F9086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2FA5702-46EB-4A75-BC34-2C677C4F9086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5284E46A-DA00-4FB7-A4AB-F8B58B05D549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5284E46A-DA00-4FB7-A4AB-F8B58B05D549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5284E46A-DA00-4FB7-A4AB-F8B58B05D549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5284E46A-DA00-4FB7-A4AB-F8B58B05D549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F5C59CF-818C-45BE-A341-0601B0FB4B53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F5C59CF-818C-45BE-A341-0601B0FB4B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F5C59CF-818C-45BE-A341-0601B0FB4B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F5C59CF-818C-45BE-A341-0601B0FB4B53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC3F9E36-04C1-4CAF-B0B4-EA1AB5E91D6D}
+	EndGlobalSection
+EndGlobal

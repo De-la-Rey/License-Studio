@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="Mernok_RFID_Licence_Studio.StartupView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mernok_RFID_Licence_Studio"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1140">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF7A7A7A"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="0.9*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="0.5*"/>
+
+        </Grid.RowDefinitions>
+
+        <!--row 0-->
+        <Button Command="{Binding Exitbtn}" BorderThickness="2" Background="Transparent" Grid.Row="0" Height="90" HorizontalAlignment="Left" Margin="40" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Images/Buttons/Exit.png" Margin="2" HorizontalAlignment="Right" RenderOptions.BitmapScalingMode="Fant"/>
+                <!--<TextBlock Text="{Binding , UpdateSourceTrigger=PropertyChanged}" Margin="3,51,10,0" Grid.Row="1" Grid.Column="2"  Foreground="black" HorizontalAlignment="Right"/>-->
+            </StackPanel>
+        </Button>
+
+        <Button Command="{Binding Optionsbtn}" BorderThickness="2" Background="Transparent" Grid.Row="0" Height="90" HorizontalAlignment="Right" Margin="40" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Images/Buttons/Options.png" Margin="1" HorizontalAlignment="Right" RenderOptions.BitmapScalingMode="Fant"/>
+                <!--<TextBlock Text="{Binding , UpdateSourceTrigger=PropertyChanged}" Margin="3,51,10,0" Grid.Row="1" Grid.Column="2"  Foreground="black" HorizontalAlignment="Right"/>-->
+            </StackPanel>
+        </Button>
+        <!--row 1-->
+
+        <!--row 2-->
+
+        <!--row 3-->
+
+        <!--:DesignHeight="600" d:DesignWidth="1140" Background="#FF005195" -->
+        <Button x:Name="ReadCardInfobtn" Content="Read Card in field" Command="{Binding ReadCardInfobtn}" IsEnabled="{Binding CardPresent}" Height="60" Width="520"   FontSize="48" Grid.Row="2" HorizontalAlignment="Center" Visibility="Collapsed"/>
+        <Button x:Name="NewCardInfobtn" Content="New Card" Command="{Binding NewCardInfobtn}" Height="60" Width="520"   FontSize="48" Grid.Row="3" HorizontalAlignment="Center"  Margin="10" Visibility="Collapsed"/>
+
+
+
+        <Label x:Name="UID"  HorizontalContentAlignment="Center" HorizontalAlignment="Center" Content="{Binding UID}" Height="70"   FontSize="48" Grid.Row="1"/>
+        <ProgressBar x:Name="ProgressBar_Current_Page" Value="{Binding ReadProgress}" Maximum="{Binding ProgressBarMax}" Minimum="0" Grid.ColumnSpan="3" Height="100" HorizontalAlignment="Stretch" Grid.Row="4" VerticalAlignment="Stretch"  RenderTransformOrigin="0.5,0.5"  Foreground="Gray" Margin="10">
+            <ProgressBar.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <RotateTransform  CenterY="0.5" CenterX="0.5" Angle="270"/>
+                        <!---->
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF005195" Offset="0"/>
+                    <GradientStop Color="Black" Offset="1.5"/>
+                </LinearGradientBrush>
+            </ProgressBar.Background>
+            <ProgressBar.RenderTransform>
+                <RotateTransform  Angle="180"/>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <Image Grid.Row="0"  HorizontalAlignment="Center" Source="{Binding CardImage}" MaxHeight="300" Margin="0,50,0,0"/>
+        <Label Content="Reading..." HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4"  Height="70" FontSize="36" Visibility="{Binding readVis}"/>
+    </Grid>
+</UserControl>

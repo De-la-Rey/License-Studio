@@ -1,0 +1,2 @@
+Add MernokAssets and Passwords folders to C:\
+

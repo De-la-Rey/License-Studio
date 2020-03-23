@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Mernok_RFID_Licence_Studio.NewIssuerPresentView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mernok_RFID_Licence_Studio"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1140"
+             Background="#FF005195">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Row 0-->
+        <Image Grid.Row="0"  Grid.ColumnSpan="2" HorizontalAlignment="Center" Source="{Binding CardImage}" />
+
+        <!--Row 1-->
+        <Label x:Name="UID"  HorizontalContentAlignment="Center" HorizontalAlignment="Center" Content="{Binding UID}" Height="70"   FontSize="50" Grid.Row="1"/>
+        
+        <!--Row 2-->
+        <Label Content="{Binding WarningMessage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="45" Grid.Row="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Grid.ColumnSpan="2" Foreground="{Binding MessageColour}"/>
+
+    </Grid>
+</UserControl>

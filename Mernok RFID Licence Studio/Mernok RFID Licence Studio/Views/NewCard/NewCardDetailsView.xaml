@@ -1,0 +1,228 @@
+﻿<UserControl x:Class="Mernok_RFID_Licence_Studio.NewCardDetails1View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Mernok_RFID_Licence_Studio"
+             mc:Ignorable="d" 
+             d:DesignHeight="750" d:DesignWidth="1140" Background="LightGray">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="371*"/>
+            <ColumnDefinition Width="354*"/>
+            <ColumnDefinition Width="393*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="400*"/>
+            <RowDefinition Height="400*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+
+        </Grid.RowDefinitions>
+
+        <!--Row 0-->
+        <!--<Grid Grid.Row="1"  Grid.RowSpan="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Source="{Binding CardImage}" MaxHeight="100" Margin="50,10,0,0"/>
+            <Label Content="{Binding UID}" FontSize="15" Grid.Row="1" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+        </Grid>-->
+        <!--Row 2-->
+        <Label Content="Fill in card Details:" FontSize="25" Grid.Row="2" HorizontalAlignment="Center" Margin="73,5" Grid.Column="2" Width="208"/>
+        <!--Row 3-->
+        <Label Content="Operator Name:" HorizontalContentAlignment="Right" Grid.Row="3" Grid.Column="0" FontSize="15" Margin="2" Grid.ColumnSpan="2"/>
+        <TextBox Text="{Binding OperatorName, Mode=TwoWay}" Grid.Row="3" Grid.Column="2"  Margin="5" FontSize="15"  TextChanged="TextBox_TextChanged" />
+        <Label Content="*Required (Space, A-Z, 0-9, underscore allowed)" Grid.Row="3" Grid.Column="3" FontSize="15" VerticalAlignment="Center" Foreground="Red" Visibility="{Binding NameReq}" Margin="0,5,0,6" Height="30" />
+
+        <!--Row 3.5-->
+        <Label Content="Operator Surname:" HorizontalContentAlignment="Right" Grid.Row="4" Grid.Column="0" FontSize="15" Margin="2" Grid.ColumnSpan="2"/>
+        <TextBox Text="{Binding OperatorSurname, Mode=TwoWay}" Grid.Row="4" Grid.Column="2"  Margin="5" FontSize="15"  TextChanged="TextBox_TextChanged" />
+        <Label Content="*Required (Space, A-Z, 0-9, underscore allowed)" Grid.Row="4" Grid.Column="3" FontSize="15" VerticalAlignment="Center" Foreground="Red" Visibility="{Binding SurnameReq}" Margin="0,6,0,5" Height="30" />
+
+
+        <!--Row 4-->
+        <Label Content="Operator ID:" HorizontalContentAlignment="Right" Grid.Row="5" Grid.Column="0" FontSize="15" Margin="2" Grid.ColumnSpan="2"/>
+        <TextBox Text="{Binding OperatorID, Mode=TwoWay}" Grid.Row="5" Grid.Column="2"  Margin="5" FontSize="15"  TextChanged="TextBox_TextChanged" />
+        <Label Content="*Required (Space, A-Z, 0-9, underscore allowed)" Grid.Row="5" Grid.Column="3" FontSize="15" VerticalAlignment="Center" Foreground="Red" Visibility="{Binding IDReq}" Margin="0,5,0,6" Height="30" />
+
+
+
+        <!--Row 5-->
+        <Label Content="Client Group:" HorizontalContentAlignment="Right" Grid.Row="6" Grid.Column="0" FontSize="15" Margin="2" Grid.ColumnSpan="2"/>
+        <!--<TextBox Text="{Binding ClientCode, Mode=TwoWay}" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left"   FontSize="25" Margin="5" Width="380"/>-->
+        <ComboBox   Grid.Row="6" Grid.Column="2" FontSize="15" Margin="5" ItemsSource="{Binding ClientCode}" 
+                   SelectedIndex="{Binding ClientCodenum}" SelectionChanged="ComboBox_SelectionChanged" IsEnabled="{Binding ClientEdit}"
+                   />
+        <Label Content="*Required (Can not be ''None'')" Grid.Row="6" Grid.Column="3" FontSize="15" VerticalAlignment="Center" Foreground="Red" Visibility="{Binding groupReq}" Margin="0,6,0,7" Height="30"/>
+
+
+        <!--Row 6-->
+        <Label Content="Client site:" HorizontalContentAlignment="Right" Grid.Row="7" Grid.Column="0" FontSize="15" Margin="2" Grid.ColumnSpan="2"/>
+        <!--<TextBox Text="{Binding ClientSite, Mode=TwoWay}" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left"   FontSize="25" Margin="5" Width="380"/>-->
+        <ComboBox   Grid.Row="7" Grid.Column="2" FontSize="15" Margin="5" ItemsSource="{Binding ClientSite}" SelectedIndex="{Binding ClientSitenum}" 
+                   SelectionChanged="ComboBox_SelectionChanged" IsEnabled="{Binding ClientEdit}"
+                  />
+        <Label Content="*Required (Can not be ''None'')" Grid.Row="7" Grid.Column="3" FontSize="15" VerticalAlignment="Center" Foreground="Red" Visibility="{Binding groupReq}" Margin="0,7,0,6" Height="30"/>
+        <!--Row 7-->
+        <Label Content="Operational Area:" HorizontalContentAlignment="Right" Grid.Row="8" Grid.Column="0" FontSize="15" Margin="2" Grid.ColumnSpan="2"/>
+        <TextBox Text="{Binding OperationalArea, Mode=TwoWay}" Grid.Row="8" Grid.Column="2" FontSize="15" Margin="5"  TextChanged="TextBox_TextChanged" IsEnabled="{Binding OpareaEnabled}"/>
+        <Label Content="*Required (0-9 allowed, min:1, max: 65535)" Grid.Row="8" Grid.Column="3" FontSize="15" VerticalAlignment="Center" Foreground="Red" Visibility="{Binding OpReq}" Margin="0,6,0,5" Height="30"/>
+
+        <!--Row 8-->
+        <Label Content="Access Level:" HorizontalContentAlignment="Right" Grid.Row="9" Grid.Column="0" FontSize="15" Margin="2" Grid.ColumnSpan="2"/>
+        <ComboBox  Grid.Row="9" Grid.Column="2" FontSize="15" Margin="5"  ItemsSource="{Binding AccessLevelList}" 
+                   SelectedIndex="{Binding AccessLevelnum}" 
+                   >
+        </ComboBox>
+        <Button Command="{Binding AccessHelpbtn}" BorderThickness="0" Background="Transparent" Grid.Row="9" HorizontalAlignment="Left" Grid.Column="3" MaxHeight="38" Width="41">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Images/Buttons/About.png" HorizontalAlignment="Right" RenderOptions.BitmapScalingMode="Fant"/>
+                <!--<TextBlock Text="{Binding , UpdateSourceTrigger=PropertyChanged}" Margin="3,51,10,0" Grid.Row="1" Grid.Column="2"  Foreground="black" HorizontalAlignment="Right"/>-->
+            </StackPanel>
+        </Button>
+
+        <!--Row 9-->
+        <Label Content="Vehicle Access Type:" HorizontalContentAlignment="Right" Grid.Row="10" Grid.Column="0" FontSize="15" Margin="5" Grid.ColumnSpan="2"/>
+        <ComboBox   Grid.Row="10" Grid.Column="2" FontSize="15"  ItemsSource="{Binding VehicleAccessList}" 
+                   SelectedIndex="{Binding VehicleAccessType_ret}"  Margin="5" SelectionChanged="ComboBox_SelectionChanged"
+                  >
+        </ComboBox>
+        <Button Command="{Binding AccesstypeHelpbtn}" BorderThickness="0" Background="Transparent" Grid.Row="10" HorizontalAlignment="Left" Grid.Column="3" MaxHeight="38" Width="41">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Images/Buttons/About.png" HorizontalAlignment="Right" RenderOptions.BitmapScalingMode="Fant"/>
+                <!--<TextBlock Text="{Binding , UpdateSourceTrigger=PropertyChanged}" Margin="3,51,10,0" Grid.Row="1" Grid.Column="2"  Foreground="black" HorizontalAlignment="Right"/>-->
+            </StackPanel>
+        </Button>
+
+        <!--Row 10-->
+        <Label Content="Product Code:"   FontSize="15" Grid.Row="11" HorizontalAlignment="Right" Grid.Column="1" Width="104"/>
+        <ComboBox  Grid.Row="11" Grid.Column="2" FontSize="15" ItemsSource="{Binding ProductCode}" 
+                   SelectedIndex="{Binding ProductList_ret}"  Margin="5" SelectionChanged="ComboBox_SelectionChanged"
+                   >
+        </ComboBox>
+        <Label Content="*Required (Can not be ''None'')" Grid.Row="11" Grid.Column="3" FontSize="15" VerticalAlignment="Center" Foreground="Red" Visibility="{Binding ProductReq}" Margin="0,7,0,6" Height="30"/>
+
+        <!--Row 11-->
+        <Grid Grid.Row="12" Grid.ColumnSpan="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Training Date:" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="5" FontSize="15"/>
+            <Label Content="Warning Date:"  HorizontalAlignment="Center" Grid.Row="0" Grid.Column="2" FontSize="15"/>
+            <Label Content="Expiry Date:" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="3" FontSize="15"/>
+            <Label Content="Training Warning Date:" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="6" FontSize="15"/>
+            <Label Content="Training Expiry Date:" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="7" FontSize="15"/>
+
+            <Viewbox Grid.Row="1" Grid.Column="5">
+                <Calendar  HorizontalAlignment="Center"  SelectedDate="{Binding TrainDate}"  DisplayDateEnd="{Binding TrainingDateMax}" Background="LightSlateGray" Margin="5"/>
+            </Viewbox>
+            <Viewbox  Grid.Row="1" Grid.Column="3">
+                <Calendar  HorizontalAlignment="Center" SelectedDate="{Binding ExpiryDate}"  DisplayDateEnd="{Binding ExpiryDateMax}" DisplayDateStart="{Binding DateStart}" Background="LightSlateGray" Margin="5"/>
+            </Viewbox>
+
+            <Viewbox Grid.Row="1" Grid.Column="2" >
+                <Calendar x:Name="WarningDate" HorizontalAlignment="Center"  SelectedDate="{Binding WarningDate}"  DisplayDateEnd="{Binding WarningDateMax}" DisplayDateStart="{Binding DateStart}" Background="LightSlateGray" Margin="5"/>
+            </Viewbox>
+
+            <Viewbox Grid.Row="1" Grid.Column="6">
+                <Calendar  HorizontalAlignment="Center"  SelectedDate="{Binding TrainWarnDate}"  DisplayDateEnd="{Binding WarningDateMax}" Background="LightSlateGray" Margin="5"/>
+            </Viewbox>
+
+            <Viewbox Grid.Row="1" Grid.Column="7">
+                <Calendar  HorizontalAlignment="Center"  SelectedDate="{Binding TrainExpDate}"  DisplayDateEnd="{Binding ExpiryDateMax}" Background="LightSlateGray" Margin="5"/>
+            </Viewbox>
+
+
+        </Grid>
+
+        <!--Row 11-->
+        <Grid Grid.Row="13" Grid.ColumnSpan="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Medical Date:" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" FontSize="15"/>
+            <Label Content="Medical Warning Date:"  HorizontalAlignment="Center" Grid.Row="0" Grid.Column="2" FontSize="15"/>
+            <Label Content="Medical Expiry Date:" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="3" FontSize="15"/>
+            <Label Content="Dover Date:" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="5" FontSize="15"/>
+            <Label Content="Dover Warning Date:" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="6" FontSize="15"/>
+            <Label Content="Dover Expiry Date:" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="7" FontSize="15"/>
+
+            <Viewbox Grid.Row="1" Grid.Column="1" >
+                <Calendar HorizontalAlignment="Center"  SelectedDate="{Binding MedicalDate}"  DisplayDateEnd="{Binding WarningDateMax}" DisplayDateStart="{Binding DateStart}" Background="LightSlateGray" Margin="5"/>
+            </Viewbox>
+
+
+            <Viewbox Grid.Row="1" Grid.Column="2">
+                <Calendar  HorizontalAlignment="Center"  SelectedDate="{Binding MedicalWarnDate}"  DisplayDateEnd="{Binding WarningDateMax}" Background="LightSlateGray" Margin="5"/>
+            </Viewbox>
+            <Viewbox  Grid.Row="1" Grid.Column="3">
+                <Calendar  HorizontalAlignment="Center" SelectedDate="{Binding MedicalExpDate}"  DisplayDateEnd="{Binding ExpiryDateMax}" DisplayDateStart="{Binding DateStart}" Background="LightSlateGray" Margin="5"/>
+            </Viewbox>
+
+            <Viewbox Grid.Row="1" Grid.Column="5" >
+                <Calendar HorizontalAlignment="Center"  SelectedDate="{Binding DoverDate}"  DisplayDateEnd="{Binding TrainingDateMax}" DisplayDateStart="{Binding DateStart}" Background="LightSlateGray" Margin="5"/>
+            </Viewbox>
+
+            <Viewbox Grid.Row="1" Grid.Column="6">
+                <Calendar  HorizontalAlignment="Center"  SelectedDate="{Binding DoverWarnDate}"  DisplayDateEnd="{Binding WarningDateMax}" Background="LightSlateGray" Margin="5"/>
+            </Viewbox>
+
+            <Viewbox Grid.Row="1" Grid.Column="7">
+                <Calendar  HorizontalAlignment="Center"  SelectedDate="{Binding DoverExpDate}"  DisplayDateEnd="{Binding ExpiryDateMax}" Background="LightSlateGray" Margin="5"/>
+            </Viewbox>
+
+
+        </Grid>
+
+
+
+
+
+        <!--Row 11-->
+
+
+    </Grid>
+</UserControl>
